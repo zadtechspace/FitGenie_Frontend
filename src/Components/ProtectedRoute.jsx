@@ -9,7 +9,7 @@ const ProtectedRoute = () => {
     useEffect(() => {
      const doVerifyDashboardToken = async()=>{
         try {
-            const res= await fetch("http://localhost:4003/api/auth/verifyDashboardToken",{
+            const res= await fetch("https://fitgenie-backend-7sko.onrender.com/api/auth/verifyDashboardToken",{
                 method:"POST",
                 body:JSON.stringify(),
                 headers:{

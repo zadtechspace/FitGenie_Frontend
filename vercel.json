@@ -8,9 +8,7 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/App.jsx"
-    }
+      { "handle": "filesystem" },           // serve static files normally
+    { "src": "/(.*)", "dest": "/index.html" } // rewrite everything else
   ]
 }
