@@ -1,20 +1,20 @@
 import React from 'react'
 import { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
 
 const ProtectedRoute = () => {
-  
-
+    // const token = useParams()
+     const dashboardToken = localStorage.getItem("jwt_token")
     const navigate = useNavigate();
     useEffect(() => {
      const doVerifyDashboardToken = async()=>{
         try {
-            const res= await fetch("https://fitgenie-backend-7sko.onrender.com/api/auth/verifyDashboardToken",{
+            const res= await fetch("http://localhost:4003/api/auth/verifyDashboardToken",{
                 method:"POST",
                 body:JSON.stringify(),
                 headers:{
                     "content-type":"application/json",
-                    "authorization":`Bearer ${localStorage.getItem("jwt_token")}`
+                    "authorization":`Bearer ${dashboardToken}`
                 }
 
             })
@@ -23,6 +23,7 @@ const ProtectedRoute = () => {
             if(!result.success){
                 navigate("/login")
             }
+
         } catch (error) {
             console.log(error)
         }

@@ -27,7 +27,7 @@ const Login = () => {
     const handleLogin =async(data)=>{
         setIsLoading(true)
         try {
-            const res = await fetch("https://fitgenie-backend-7sko.onrender.com/api/auth/login",{
+            const res = await fetch("http://localhost:4003/api/auth/login",{
                 method:"POST",
                 body:JSON.stringify(data),
                 headers:{
@@ -43,7 +43,7 @@ const Login = () => {
                 localStorage.setItem("jwt_token",result.token)
                 console.log(result)
                 reset()
-                navigate("/dashboard")
+                navigate("/private")
                 toast.success("Login successful!")
             } else {
                
