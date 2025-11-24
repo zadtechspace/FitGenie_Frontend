@@ -26,7 +26,7 @@ const Signup = () => {
 
         setIsLoading(true)
         try {
-            const res = await fetch("http://localhost:4003/api/auth/register",{
+            const res = await fetch("https://fitgenie-backend-7sko.onrender.com/api/auth/register",{
                 method:"POST",
                 body:JSON.stringify(data),
                headers:{

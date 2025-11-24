@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
 
 const ProtectedRoute = () => {
-  
-
+    // const token = useParams()
+     const dashboardToken = localStorage.getItem("jwt_token")
     const navigate = useNavigate();
     useEffect(() => {
      const doVerifyDashboardToken = async()=>{
@@ -14,7 +14,7 @@ const ProtectedRoute = () => {
                 body:JSON.stringify(),
                 headers:{
                     "content-type":"application/json",
-                    "authorization":`Bearer ${localStorage.getItem("jwt_token")}`
+                    "authorization":`Bearer ${dashboardToken}`
                 }
 
             })
@@ -23,6 +23,7 @@ const ProtectedRoute = () => {
             if(!result.success){
                 navigate("/login")
             }
+
         } catch (error) {
             console.log(error)
         }

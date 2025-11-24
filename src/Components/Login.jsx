@@ -43,7 +43,7 @@ const Login = () => {
                 localStorage.setItem("jwt_token",result.token)
                 console.log(result)
                 reset()
-                navigate("/dashboard")
+                navigate("/private")
                 toast.success("Login successful!")
             } else {
                

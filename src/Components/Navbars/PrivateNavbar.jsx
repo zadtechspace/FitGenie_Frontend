@@ -16,9 +16,9 @@ const PrivateNavbar = () => {
 
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="hover:underline">Homepage</Link>
-          <Link to="/dashboard/workouts" className="hover:underline">Workouts</Link>
-          <Link to="/progress" className="hover:underline">Progress</Link>
-          <Link to="/dashboard/nutrition" className="hover:underline">Nutrition</Link>
+          <Link to="/private/workouts" className="hover:underline">Workouts</Link>
+          <Link to="private/progress" className="hover:underline">Progress</Link>
+          <Link to="/nutrition" className="hover:underline">Nutrition</Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ const PrivateNavbar = () => {
             <span className="absolute top-1 right-1 h-3 w-3 bg-red-500 rounded-full"></span>
           </button>
 
-          <Link to="/profile" className="hidden md:inline-flex items-center gap-2">
+          <Link to="/private/profile" className="hidden md:inline-flex items-center gap-2">
             <img src="https://via.placeholder.com/40" alt="Profile" className="h-9 w-9 rounded-full border-2 border-white/30" />
           </Link>
 
@@ -50,11 +50,11 @@ const PrivateNavbar = () => {
         <div className="md:hidden px-4 pb-4 bg-gradient-to-r from-sky-600 to-indigo-600 text-white">
           <nav className="flex flex-col space-y-2">
             <Link to="/" className="block py-2">Homepage</Link>
-            <Link to="/dashboard/workouts" className="block py-2">Workouts</Link>
-            <Link to="/dashboard/progress" className="block py-2">Progress</Link>
-            <Link to="/dashboard/nutrition" className="block py-2">Nutrition</Link>
+            <Link to="/private/workouts" className="block py-2">Workouts</Link>
+            <Link to="/private/progress" className="block py-2">Progress</Link>
+            <Link to="/private/nutrition" className="block py-2">Nutrition</Link>
             <hr className="border-white/20 my-2" />
-            <Link to="/dashboard/profile" className="block py-2">Profile</Link>
+            <Link to="private/profile" className="block py-2">Profile</Link>
             <Link to="/logout" className="block py-2 text-red-300">Logout</Link>
           </nav>
         </div>

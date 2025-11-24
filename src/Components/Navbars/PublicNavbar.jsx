@@ -17,14 +17,14 @@ const Navbar = () => {
           <Link to="/features" className="text-white/90 hover:text-white">Features</Link>
           <Link to="/plans" className="text-white/90 hover:text-white">Plans</Link>
           <Link to="/about" className="text-white/90 hover:text-white">About</Link>
-          <Link to="/dashboard" className="text-white/90 hover:text-white">dashboard</Link>
+          <Link to="/private" className="text-white/90 hover:text-white">dashboard</Link>
         </nav>
 
         <div className="hidden md:flex md:items-center md:space-x-4">
           <Link to="/signup" className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-md border border-white/20">Sign Up</Link>
         </div>
 
-        {/* Mobile menu */}
+       
         <button
           className="md:hidden p-2 rounded-md text-slate-800"
           aria-label="Toggle menu"
