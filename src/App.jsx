@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/*" element={<Public />} />
 
         <Route element={<ProtectedRoute/>}>
-        <Route path="private/*" element={<Private />} />
+        <Route path="/private/*" element={<Private />} />
         </Route>
       </Routes>
     </div>

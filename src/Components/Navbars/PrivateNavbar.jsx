@@ -19,6 +19,7 @@ const PrivateNavbar = () => {
           <Link to="/private/workouts" className="hover:underline">Workouts</Link>
           <Link to="private/progress" className="hover:underline">Progress</Link>
           <Link to="/nutrition" className="hover:underline">Nutrition</Link>
+          <Link to="/private/subscription" className="hover:underline">Billing</Link>
         </nav>
 
         <div className="flex items-center gap-3">
