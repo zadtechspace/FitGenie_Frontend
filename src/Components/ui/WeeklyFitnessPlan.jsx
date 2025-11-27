@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import { toast } from "sonner"
 
 
@@ -198,15 +199,15 @@ export function WeeklyFitnessPlan() {
                     }}>
                         <h2>No fitness plans yet</h2>
                         <p>Start by creating a personalized fitness and diet plan tailored to your specific goals and needs</p>
-                        <button
-                            disabled={generatingPlan}
-                            onClick={handleCreatePlan}
+                        <Link
+                            to="/private/generate-plan"
                             style={{
                                 background: "black",
                                 padding: ".5rem 1rem",
                                 borderRadius: "8px",
-                                color: "white"
-                            }}> {generatingPlan ? "Generating..." : "Create Your First Plan"} </button>
+                                color: "white",
+                                textAlign: "center"
+                            }}> Create Your First Plan </Link>
                     </div>
                 )}
         </div>

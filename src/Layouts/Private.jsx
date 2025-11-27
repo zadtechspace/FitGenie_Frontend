@@ -5,6 +5,7 @@ import Profile from '../Components/Profile/Profile'
 import EditProfile from '../Components/Profile/EditProfile'
 import DashboardINdex from '../pages/DashboardINdex'
 import Subscription from '../pages/Subscription'
+import GeneratePlan from '../pages/GeneratePlan'
 
 const Private = () => {
   return (
@@ -16,6 +17,7 @@ const Private = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/subscription" element={<Subscription />} />
+        <Route path='/generate-plan' element={<GeneratePlan />} />
       </Routes>
     </div>
   )
